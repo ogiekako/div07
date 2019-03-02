@@ -1,0 +1,10 @@
+<script>
+function setnumber(s) {
+  n = parseInt(s, 10);
+  res = n / 0.7
+  document.getElementById("res").textContent = res
+}
+</script>
+
+<input type="number" id="num" onchange="setnumber(this.value)">
+<label id="res"></label>
