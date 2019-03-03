@@ -1,10 +1,24 @@
+<head>
+<style type="text/css">
+body {
+  font-size: 20;
+}
+#num {
+  font-size: 20;
+}
+</style>
+</head>
 <script>
 function setnumber(s) {
   n = parseInt(s, 10);
+  if (Number.isNaN(n)) {
+    n = 0
+  }
   res = n / 0.7
   document.getElementById("res").textContent = res
 }
 </script>
 
-<input type="number" id="num" onchange="setnumber(this.value)">
-<label id="res"></label>
+<input type="number" id="num" value="0" onkeyup="setnumber(this.value)" onchange="setnumber(this.value)">
+÷ 0.7 = 
+<label id="res">0</label>
